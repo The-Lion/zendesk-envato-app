@@ -1,25 +1,25 @@
 {
+  "name": "Envato - Verify Purchase & Support",
   "author": {
-    "name": "Oxford-Themes",
-    "email": "support@oxford-themes.com"
+    "name": "Floris de Leeuw",
+    "email": "support@florisdeleeuw.nl"
   },
-
-  "location": ["ticket_sidebar","new_ticket_sidebar"],
+  "location": ["ticket_sidebar", "new_ticket_sidebar"],
   "defaultLocale": "en",
-  "private": false,
-  "singleInstall": true,
-  "frameworkVersion": "0.5",
-
+  "private": true,
+  "singleInstall": false,
+  "version": "1.0",
+  "frameworkVersion": "1.0",
   "parameters": [
     {
-      "name": "username",
+      "name": "token",
       "type": "text",
       "required": true
     },
     {
-      "name": "api_key",
+      "name": "purchasecode_field_id",
       "type": "text",
-      "required": true
+      "required": false
     }
   ]
 }

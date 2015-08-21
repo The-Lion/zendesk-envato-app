@@ -2,10 +2,21 @@
   width: 97%;
 }
 
-.failed, .loading, .verify-purchase-code-result {
+.failed, .info, .loading, .verify-purchase-code-result {
   margin-top: 10px;
 }
 
 .loading .spinner {
   text-align: center;
+}
+
+.support {
+  font-size: 115%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.support span {
+  font-size: 80%;
+  font-weight: normal;
 }
