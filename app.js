@@ -73,7 +73,7 @@
 
               } else {
                 support_text = this.I18n.t('purchase_code.support_valid');
-                support_date = this.I18n.t('purchase_code.support_valid_till') + ' ' + new Date('Tue Aug 18 01:09:18 +1000 2015').toLocaleString();
+                support_date = this.I18n.t('purchase_code.support_valid_till') + ' ' + new Date(support_date).toLocaleString();
                 support_class = 'success';
               }
 
