@@ -70,7 +70,10 @@
               if (support_date === "" || support_date === null) {
                 support_text = this.I18n.t('purchase_code.support_expired');
                 support_class = 'error';
-
+			  } else if (new Date(support_date) < new Date()) {
+                support_text = this.I18n.t('purchase_code.support_expired');
+				support_date = this.I18n.t('purchase_code.support_valid_till') + ' ' + new Date(support_date).toLocaleString();
+                support_class = 'error';
               } else {
                 support_text = this.I18n.t('purchase_code.support_valid');
                 support_date = this.I18n.t('purchase_code.support_valid_till') + ' ' + new Date(support_date).toLocaleString();
