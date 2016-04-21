@@ -20,3 +20,9 @@ Easily query the [Envato API](http://marketplace.envato.com/api/documentation) f
 
 
 App based on https://github.com/mattes/zendesk-envato-app
+
+Have a question? Feel free to let me know.
+
+[Send me a beer!](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CR7G44T9WPZAA&lc=US&item_name=Florisdeleeuw%2enl&item_number=Zendesk%20App%20Envato&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+
+Cheers.
