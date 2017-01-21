@@ -4,8 +4,8 @@
     requests: {
       verify_purchase: function (purchase_code) {
         return {
-          //url: 'https://api.envato.com/v2/market/author/sale?code=' + purchase_code,
-          url: 'https://api.envato.com/v1/market/private/user/verify-purchase:' + purchase_code + '.json',
+          url: 'https://api.envato.com/v3/market/author/sale?code=' + purchase_code,
+          //url: 'https://api.envato.com/v1/market/private/user/verify-purchase:' + purchase_code + '.json',
           dataType: 'json',
           headers: {
             'Authorization': 'Bearer ' + this.setting('token')
@@ -62,10 +62,10 @@
 
         if (data) {
 
-          if (data.hasOwnProperty('verify-purchase')) {
-            if (data['verify-purchase'].hasOwnProperty('item_id')) {
+          if (data.hasOwnProperty('item')) {
+            if (data['item'].hasOwnProperty('id')) {
 
-              var support_date = data['verify-purchase'].supported_until, support_text, support_class;
+              var support_date = data.supported_until, support_text, support_class;
 
               if (support_date === "" || support_date === null) {
                 support_text = this.I18n.t('purchase_code.support_expired');
@@ -81,11 +81,11 @@
               }
 
               this.switchTo('verify_purchase_code_result', {
-                item_name: data['verify-purchase'].item_name,
-                item_id: data['verify-purchase'].item_id,
-                created_at: new Date(data['verify-purchase'].created_at).toLocaleString(),
-                buyer: data['verify-purchase'].buyer,
-                licence: data['verify-purchase'].licence,
+                item_name: data['item'].name,
+                item_id: data['item'].id,
+                created_at: new Date(data.sold_at).toLocaleString(),
+                buyer: data.buyer,
+                licence: data.licence,
                 support_class: support_class,
                 support_text: support_text,
                 support_date: support_date
