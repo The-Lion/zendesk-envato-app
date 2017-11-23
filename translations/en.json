@@ -1,7 +1,9 @@
 {
   "app": {
-    "title": "Envato - Verify Purchase & Support",
-    "description": "Envato Zendesk Integration to verify item purchases",
+    "name": "Envato - Verify Purchase & Support",
+    "short_description": "Envato Zendesk Integration to verify item purchases",
+    "long_description": "Envato Zendesk Integration to verify item purchases",
+    "installation_instructions": "Check instructions on https://github.com/The-Lion/zendesk-envato-app",
     "parameters": {
       "token": {
         "label": "Personal Token",
@@ -12,24 +14,5 @@
         "helpText": "Enter which custom ticket field contains the purchase code of the customer. The custom field ID number is located on the top of your custom field page (Admin -> Manage -> Ticket Fields -> Your Custom Field). You can use a regular expression field with following regular expression: ^([a-z0-9]{8})-?([a-z0-9]{4})-?([a-z0-9]{4})-?([a-z0-9]{4})-?([a-z0-9]{12})$"
       }
     }
-  },
-  "global": {
-    "loading": "Verifying {{purchase_code}} for {{username}} ..."
-  },
-  "purchase_code": {
-    "placeholder": "Type purchase code and press enter ...",
-    "type_purchase_code": "Please type purchase code.",
-    "invalid_purchase_code": "Invalid purchase code",
-    "no_return_no_code": "API did not retun verification, nor any error code.",
-    "no_data": "API did not return any data.",
-    "unable_to_contact": "Unable to contact API.",
-    "item": "Item",
-    "sold_to": "sold to",
-    "user": "User",
-    "license": "License",
-    "support_expired": "No valid Support Pack",
-    "support_valid": "Valid Support Pack",
-    "support_valid_till": "till",
-    "date": "Date"
   }
 }

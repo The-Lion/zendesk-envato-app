@@ -1,1 +1,0 @@
-<div class="failed alert alert-error support"> >>> {{message}}  <<< </div>

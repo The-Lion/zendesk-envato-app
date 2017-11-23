@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://assets.zendesk.com/apps/sdk-assets/css/2/zendesk_garden.css" type="text/css">
+    <style>html{overflow-y: auto;}</style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/g/lodash@4.3.0,handlebarsjs@4.0.5,jquery@2.2.4,momentjs@2.9.0,bootstrap@2.3.2"></script>
+
+    <section data-main>
+      <div id="app_envato_licenses" class="app-container">
+
+        <form id="purchase-code-query">
+          <input class="c-txt__input" type="text" id="purchase_code" name="purchase_code" placeholder="Type purchase code and press enter ..." />
+        </form>
+
+        <div class="loading u-mb u-ta-center" style="display:none">
+          <div class="c-tooltip c-arrow c-arrow--t c-tooltip--light c-tooltip--medium">Verifying <span class="check_purchase_code"></span> ...</div>
+        </div>
+
+        <div class="verify_failed c-callout" style="display:none"></div>
+
+        <div class="verify-purchase-code-result" style="display:none">
+          <img src="" class="item_thumbnail u-mb" alt="Item Thumbnail"/>
+          <table class="c-table c-table--sm  u-mb">
+            <tr class="c-table__row">
+              <td class="c-table__row__cell" width="60">Item</td>
+              <td class="c-table__row__cell item_name"></td>
+            </tr>
+            <tr class="c-table__row">
+              <td class="c-table__row__cell">License</td>
+              <td class="c-table__row__cell"><strong class="license_type"></strong> sold on <br/><span class="license_created_at"></span></td>
+            </tr>
+            <tr class="c-table__row">
+              <td class="c-table__row__cell">Buyer</td>
+              <td class="c-table__row__cell"><a href="#" target="_blank" class="buyer_url"><strong class="buyer_name"></strong></a> owns <strong class="purchase_count"></strong> license(s)</td>
+            </tr>
+          </table>
+
+          <div class="support c-callout"><center><strong class="c-callout__title"><span class="support_status"></span></strong><p class="c-callout__paragraph support_till"></p></center></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
+    <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
